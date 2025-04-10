@@ -29,7 +29,7 @@
     <!-- Custom JS -->
     <script src="js/main.js" defer></script>
   </head>
-  <body>
+  <body class="bg-danger">
     <div class="container">
       <h1>CALCOLA IL PREZZO DEL TUO BIGLIETTO</h1>
 
@@ -54,10 +54,40 @@
           </select>
         </div>
 
-        <button type="submit" class="btn btn-primary">Submit</button>
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="submit" class="btn btn-primary">Genera</button>
+        <button type="submit" class="btn btn-primary">Annulla</button>
       </form>
+
+      <div id="my-ticket" class="d-none">
+        <h1>IL TUO BIGLIETTO</h1>
+        <div class="row">
+          <h2>DETTAGLI PASSEGGERI</h2>
+          <div class="col-3">
+            <div class="fs-4">NOME PASSEGERO</div>
+            <div id="passenger-name"></div>
+          </div>
+          <div class="col-8 d-flex">
+            <div class="col-4">
+              <div class="fs-5">Offerta</div>
+              <p id="offer-type"></p>
+            </div>
+            <div class="col-4">
+              <div class="fs-5">Carrozza</div>
+              <p>5</p>
+            </div>
+            <div class="col-4">
+              <div class="fs-5">Codice CP</div>
+              <p>92911</p>
+            </div>
+            <div class="col-4">
+              <div class="fs-5">Costo Biglietto</div>
+              <p id="ticket-price"></p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
+
 
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
