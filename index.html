@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="author" content="Tiziano Nicolai" />
-    <title>My Boolean Project</title>
+    <title>Biglietto Treno Form</title>
 
     <!-- font awesome -->
     <link
@@ -30,14 +30,33 @@
     <script src="js/main.js" defer></script>
   </head>
   <body>
-    <div class="container mt-5">
-      <h1 id="main-title">JS Project</h1>
-      <button class="btn btn-primary" id="traffic-light-button">Change color</button>
-      <p id="traffic-light" class="text-success">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum asperiores minus quis vitae
-        labore laboriosam accusantium, ut illum nobis voluptas cum reiciendis voluptatum obcaecati.
-        Veritatis quas animi voluptas ullam ipsum?
-      </p>
+    <div class="container">
+      <h1>CALCOLA IL PREZZO DEL TUO BIGLIETTO</h1>
+
+      <form id="ticket-form">
+
+        <div class="form-group">
+          <label>Nome Cognome</label>
+          <input type="text" class="form-control" id="fullname-input" placeholder="Nome Cognome">
+        </div>
+
+        <div class="form-group">
+          <label>Km da percorrere</label>
+          <input type="text" class="form-control" id="km-input" placeholder="Km da percorrere">
+        </div>
+
+        <div class="form-group">
+          <label>Fascia d'età</label>
+          <select class="form-control" id="age-group-input">
+            <option>Maggiorenne</option>
+            <option>Minorenne</option>
+            <option>Over 65</option>
+          </select>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
     </div>
 
     <script
