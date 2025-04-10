@@ -29,61 +29,66 @@
     <!-- Custom JS -->
     <script src="js/main.js" defer></script>
   </head>
-  <body class="bg-danger">
+  <body>
     <div class="container">
-      <h1>CALCOLA IL PREZZO DEL TUO BIGLIETTO</h1>
+      <h1 class="text-white text-center fw-bold">CALCOLA IL PREZZO DEL TUO BIGLIETTO</h1>
 
-      <form id="ticket-form">
+      <form id="ticket-form" class="bg-white rounded-5 pt-4">
 
-        <div class="form-group">
-          <label>Nome Cognome</label>
-          <input type="text" class="form-control" id="fullname-input" placeholder="Nome Cognome">
+        <div id="inputs" class="d-flex justify-content-center gap-5">
+          <div class="form-group text-center">
+            <label>Nome Cognome</label>
+            <input type="text" class="form-control mt-3 text-center border-dark" id="fullname-input" placeholder="Nome Cognome">
+          </div>
+  
+          <div class="form-group text-center">
+            <label>Km da percorrere</label>
+            <input type="text" class="form-control mt-3 text-center border-dark" id="km-input" placeholder="Km da percorrere">
+          </div>
+  
+          <div class="form-group text-center">
+            <label>Fascia d'età</label>
+            <select class="form-control mt-3 text-center border-dark" id="age-group-input">
+              <option>Maggiorenne</option>
+              <option>Minorenne</option>
+              <option>Over 65</option>
+            </select>
+          </div>
         </div>
 
-        <div class="form-group">
-          <label>Km da percorrere</label>
-          <input type="text" class="form-control" id="km-input" placeholder="Km da percorrere">
+        <div id="buttons" class="my-3 py-5 d-flex gap-4 justify-content-center">
+          <button type="submit" class="btn btn-secondary fw-bold fs-5">Genera</button>
+          <button type="reset" value="Reset" class="btn btn-secondary fw-bold fs-5">Annulla</button>
         </div>
-
-        <div class="form-group">
-          <label>Fascia d'età</label>
-          <select class="form-control" id="age-group-input">
-            <option>Maggiorenne</option>
-            <option>Minorenne</option>
-            <option>Over 65</option>
-          </select>
-        </div>
-
-        <button type="submit" class="btn btn-primary">Genera</button>
-        <button type="submit" class="btn btn-primary">Annulla</button>
       </form>
 
-      <div id="my-ticket" class="d-none">
-        <h1>IL TUO BIGLIETTO</h1>
-        <div class="row">
-          <h2>DETTAGLI PASSEGGERI</h2>
-          <div class="col-3">
-            <div class="fs-4">NOME PASSEGERO</div>
-            <div id="passenger-name"></div>
+      <div id="my-ticket" class="text-black">
+        <h1 class="text-white fw-bold text-center">IL TUO BIGLIETTO</h1>
+        <div class="row bg-light p-4">
+          <h2 class="fw-bold">DETTAGLI PASSEGGERI</h2>
+          
+          <div class="col-3 fw-bold p-3 bg-secondary ">
+            <div class="fs-4">NOME PASSEGGERO</div>
+            <div id="passenger-name" class="fs-5"></div>
           </div>
-          <div class="col-8 d-flex">
-            <div class="col-4">
-              <div class="fs-5">Offerta</div>
-              <p id="offer-type"></p>
+          <div class="col-8 ps-3 d-flex justify-content-center border-bottom border-top border-secondary">
+            <div class="col-3 p-3">
+              <div class="fs-5 fw-bold">Offerta</div>
+              <div id="offer-type" class="mt-4"></div>
             </div>
-            <div class="col-4">
-              <div class="fs-5">Carrozza</div>
-              <p>5</p>
+            <div class="col-3 p-3">
+              <div class="fs-5 fw-bold">Carrozza</div>
+              <div class="mt-4">5</div>
             </div>
-            <div class="col-4">
-              <div class="fs-5">Codice CP</div>
-              <p>92911</p>
+            <div class="col-3 p-3">
+              <div class="fs-5 fw-bold">Codice CP</div>
+              <div class="mt-4">92911</div>
             </div>
-            <div class="col-4">
-              <div class="fs-5">Costo Biglietto</div>
-              <p id="ticket-price"></p>
+            <div class="col-3 p-3">
+              <div class="fs-5 fw-bold">Costo Biglietto</div>
+              <div id="ticket-price" class="mt-4"></div>
             </div>
-          </div>
+            </div>
         </div>
       </div>
     </div>

@@ -11,7 +11,7 @@ const ticketForm = document.getElementById(`ticket-form`);
 
 ticketForm.addEventListener(`submit`, function (event) {
     event.preventDefault();
-
+    
     const fullname = fullnameInput.value;
     const km = parseInt(kmInput.value);
     const ageGroup = ageGroupInput.value;
@@ -20,19 +20,21 @@ ticketForm.addEventListener(`submit`, function (event) {
     const passengerName = document.getElementById(`passenger-name`);
     const offerType = document.getElementById(`offer-type`);
     const ticketPrice = document.getElementById(`ticket-price`);
-
-    myTicket.classList.remove(`d-none`);
-    myTicket.classList.remove(`d-block`);
+    
     
     if(!fullname) return;
     if(isNaN(km)) return;
     if(!ageGroup) return;
 
+    myTicket.classList.remove(`d-none`);
+    myTicket.classList.remove(`d-block`);
+    
+    // Calcolo del prezzo del biglietto
     const price = 0.21 * km;
     let discountPerc = ``;
     let discountAmount = ``;
     let finalPrice = ``;
-    
+
     if (ageGroup === `Minorenne`) {
         discountPerc = 20;
         discountAmount = price * discountPerc / 100;
@@ -59,4 +61,6 @@ ticketForm.addEventListener(`submit`, function (event) {
     passengerName.append(fullname);
     ticketPrice.append(`${finalPrice.toFixed(2)} €`);
 })
+
+
 
